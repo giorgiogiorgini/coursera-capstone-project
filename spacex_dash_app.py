@@ -66,7 +66,7 @@ def get_pie_chart(launch_site):
 @app.callback(Output(component_id='success-payload-scatter-chart', component_property='figure'),
               Input(component_id='site-dropdown', component_property='value'),
               Input(component_id='payload-slider', component_property='value'))
-def get_pie_chart(launch_site, payload_range):
+def get_scatter_chart(launch_site, payload_range):
     payload_min = payload_range[0]
     payload_max = payload_range[1]
     filtered_df = spacex_df[(spacex_df['Payload Mass (kg)'] > payload_min) & (spacex_df['Payload Mass (kg)'] < payload_max)]
